@@ -2,8 +2,8 @@
 #include <string>
 
 class Account {
-private:
     friend std::ostream &operator<<(std::ostream &os, const Account &account);
+private:
     static constexpr const char *def_name = "Unnamed Account";
     static constexpr double def_bal = 0.00;
     

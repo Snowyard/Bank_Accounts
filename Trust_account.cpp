@@ -6,8 +6,8 @@ Trust_account::Trust_account(std::string name_val, double bal_val, double int_va
 
 bool Trust_account::deposit(double amount)
 {
-    if(amount >= 5000)
-        amount += 50;
+    if(amount >= bonus_threshold)
+        amount += bonus_amount;
     
     return Savings_account::deposit(amount);
 }       
@@ -17,7 +17,7 @@ bool Trust_account::deposit(double amount)
 bool Trust_account::withdraw(double amount)
 {
     
-    if(withdraws < 3 && amount < balance * 0.2) {
+    if(withdraws < 3 && amount < balance * max_withdraw_percent) {
             ++withdraws;
             return Savings_account::withdraw(amount);
             

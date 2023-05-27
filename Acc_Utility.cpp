@@ -98,10 +98,10 @@ void withdraw(std::vector<Chequing_account> &accounts, double amount)
     for(auto &acc: accounts)
     {
         if(acc.withdraw(amount))
-            std::cout << "Withdrawing " << amount << " from " << acc << " ($1.50 Withdrawal Fee Enacted)" << std::endl;
+            std::cout << "Withdrawing " << amount << " from " << acc << " ($" << Chequing_account::per_cheque_fee << " Withdrawal Fee Enacted)" << std::endl;
         else
             std::cout << "Failed to withdraw " << amount << " from " << acc << std::endl;
-    }
+    } 
 }
 
 //Utility helper for Trust_account class

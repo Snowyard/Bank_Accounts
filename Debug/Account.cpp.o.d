@@ -1,5 +1,5 @@
-Debug/Account.cpp.o: Account.cpp Account.h Savings_account.h
+Debug/Account.cpp.o: Account.cpp Account.h I_Printable.h
 
 Account.h:
 
-Savings_account.h:
+I_Printable.h:
